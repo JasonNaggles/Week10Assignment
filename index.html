@@ -6,46 +6,77 @@
     <title>Computer Shop</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body class="container">
-    <br>
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="form-group">
-                        <label for="new-start-date">Start Date</label>
-                        <input type="date" class="form-control" id="new-start-date">
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="form-group">
-                        <label for="new-end-date">End Date</label>
-                        <input type="date" class="form-control" id="new-end-date">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
-                    <div class="form-group">
-                        <label for="new-task">Task</label>
-                        <input type="text" class="form-control" id="new-task" placeholder="Task">
-                    </div>
-                </div>
-            </div>
-            <div>
-                <button id="add" class="btn btn-primary form-control">Create</button>
-            </div>
-        </div>
-    </div>
-    <table id="list" class="table table-dark table-striped">
-        <tr>
-            <th>Task</th>
-            <th>Date Created</th>
-            <th>Start Date</th>
-            <th>Due Date</th>
-            <th>Actions</th>
-        </tr>
-    </table>
+<body>
+    <div class="container mt-5">
+        <h2>Computer Shop Products</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <th>Product Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>In Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Desktop Computer</td>
+              <td>Desktops</td>
+              <td>$699</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Laptop</td>
+              <td>Laptops</td>
+              <td>$899</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Monitor</td>
+              <td>Accessories</td>
+              <td>$199</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Keyboard & Mouse Combo</td>
+              <td>Accessories</td>
+              <td>$49</td>
+              <td>40</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2>Order Form</h2>
+        <form>
+          <div class="form-group">
+            <label for="productSelect">Select Product:</label>
+            <select class="form-control" id="productSelect" name="productSelect">
+              <option value="1">Desktop Computer</option>
+              <option value="2">Laptop</option>
+              <option value="3">Monitor</option>
+              <option value="4">Keyboard & Mouse Combo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantityInput">Quantity:</label>
+            <input type="number" class="form-control" id="quantityInput" name="quantityInput" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="nameInput">Your Name:</label>
+            <input type="text" class="form-control" id="nameInput" name="nameInput" required>
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Email Address:</label>
+            <input type="email" class="form-control" id="emailInput" name="emailInput" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Order</button>
+        </form>
+      </div>
     <script src="todo.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
