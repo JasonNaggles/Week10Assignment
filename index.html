@@ -6,9 +6,9 @@
     <title>Computer Shop</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
+<body class="bg-primary">
     <div class="container mt-5">
-        <h2>Computer Shop Products</h2>
+        <h2 class="text-warning">Computer Shop Products</h2>
         <table class="table">
           <thead>
             <tr>
@@ -51,32 +51,27 @@
           </tbody>
         </table>
         
-        <h2>Order Form</h2>
-        <form>
-          <div class="form-group">
-            <label for="productSelect">Select Product:</label>
-            <select class="form-control" id="productSelect" name="productSelect">
-              <option value="1">Desktop Computer</option>
-              <option value="2">Laptop</option>
-              <option value="3">Monitor</option>
-              <option value="4">Keyboard & Mouse Combo</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="quantityInput">Quantity:</label>
-            <input type="number" class="form-control" id="quantityInput" name="quantityInput" min="1" value="1">
-          </div>
-          <div class="form-group">
-            <label for="nameInput">Your Name:</label>
-            <input type="text" class="form-control" id="nameInput" name="nameInput" required>
-          </div>
-          <div class="form-group">
-            <label for="emailInput">Email Address:</label>
-            <input type="email" class="form-control" id="emailInput" name="emailInput" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit Order</button>
-        </form>
-      </div>
+        <h2 class="text-warning">Order Form</h2>
+  <form id="productForm">
+    <div class="form-group">
+      <label for="productName">Product Name:</label>
+      <input type="text" class="form-control" id="productName" name="productName" required>
+    </div>
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <input type="text" class="form-control" id="category" name="category" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="text" class="form-control" id="price" name="price" required>
+    </div>
+    <div class="form-group">
+      <label for="stock">In Stock:</label>
+      <input type="number" class="form-control" id="stock" name="stock" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </form>
+</div>
     <script src="todo.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
